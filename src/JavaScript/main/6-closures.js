@@ -36,6 +36,7 @@ function makeCounter() {
   var count = 0;
 
   return {
+    getCount: () => count,
     increment: () => {
       count++;
       return count;
@@ -47,7 +48,10 @@ function makeCounter() {
   };
 }
 
-const processCount = makeCounter();
+// const processCount = makeCounter();
+// console.log(processCount.getCount());
+// processCount.increment();
+// console.log(processCount.getCount());
 
 function makePassword(password) {
   return (passwordGuess) => passwordGuess === password;
@@ -61,41 +65,18 @@ function multN(n) {
 
 const getNumber = multN(2);
 
-function handler() {
-  alert(doneMessage);
-}
+const fib = [1, 2, 3, 5, 8, 13];
 
-function makeTimer(doneMessage, sec) {
-  setTimeout(() => alert(doneMessage), sec * 1000);
-
-  doneMessage = "Babii";
-}
-
-// makeTimer("Cookies are done", 2);
-
-window.onload = () => {
-  let count = 0;
-
-  const message = document.getElementById("message");
-  const button = document.getElementById("button");
-
-  button.onclick = () => {
-    count++;
-    message.innerHTML = `You clicked on button ${count} times!`;
-  };
-};
-
-const cook = function (food) {
-  if (food === "cookies") {
-    alert("More please");
-  } else if (food === "cake") {
-    alert("Yum yum");
+function loop() {
+  for (var i = 0; i < 5000000000; i++) {
+    // (function (k) {
+    //   setTimeout(function () {
+    //     console.log(k, fib[k]);
+    //   }, 1500);
+    // })(i);
   }
-};
-
-function make(cook) {
-  cook("cookies");
-  cook("cake");
 }
 
-make(cook);
+console.time("Log");
+loop();
+console.timeEnd("Log");

@@ -1,0 +1,131 @@
+.App {
+  height: 100vh;
+
+  display: flex;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+
+  position: relative;
+
+  margin: auto;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+
+  border-radius: 50%;
+}
+
+.red {
+  top: 0;
+  left: 0;
+
+  background-color: red;
+
+  animation: Red-circle infinite 2s ease;
+}
+
+.green {
+  top: 0;
+  right: 0;
+
+  background-color: green;
+
+  animation: Green-circle infinite 2s ease;
+}
+
+.blue {
+  bottom: 0;
+  left: 0;
+
+  background-color: blue;
+
+  animation: Blue-circle infinite 2s ease;
+}
+.yellow {
+  bottom: 0;
+  right: 0;
+
+  background-color: yellow;
+
+  animation: Yellow-circle infinite 2s ease;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 2s ease;
+}
+
+@keyframes Red-circle {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translate(60px, 60px);
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes Green-circle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-60px, 60px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes Yellow-circle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-60px, -60px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes Blue-circle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(60px, -60px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
