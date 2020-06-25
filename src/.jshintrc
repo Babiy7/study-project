@@ -1,8 +1,0 @@
-{
-    "esversion": 6,
-    "maxlen": 100,
-    "curly": true,
-    "eqeqeq": true,
-    "undef": false,
-    "trailingcomma": true
-}

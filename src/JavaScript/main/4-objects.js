@@ -1,7 +1,7 @@
-//об'єктний літерал
+// об'єктний літерал
 const obj1 = {};
 
-//constructor
+// constructor
 function Person(name, age) {
   this.name = name;
   this.age = age;
@@ -10,7 +10,7 @@ function Person(name, age) {
   };
 }
 
-let person = new Person("Oleg", 23);
+const person = new Person('Oleg', 23);
 
 person.print();
 
@@ -31,7 +31,7 @@ export function myContext() {
   const array = [1, 2, 3, 4, 5];
 
   const person = {
-    name: "Oleg",
+    name: 'Oleg',
     age: 23,
   };
 
@@ -66,10 +66,10 @@ export function myContext() {
   // console.log(bind(print, person, "Frontend")("worker"));
   // bind(print, person)("Frontend", "worker");
 
-  //Call
+  // Call
 
   function call(fn, context, ...rest) {
-    const uniqeId = Symbol("id");
+    const uniqeId = Symbol('id');
 
     context[uniqeId] = fn;
 
@@ -78,12 +78,12 @@ export function myContext() {
     delete context[uniqeId];
   }
 
-  call(print, person, "Frontend", "I am not looking for a job");
+  call(print, person, 'Frontend', 'I am not looking for a job');
 
-  //Apply
+  // Apply
 
   function apply(fn, context, args) {
-    const uniqeId = Symbol("id");
+    const uniqeId = Symbol('id');
 
     context[uniqeId] = fn;
 
@@ -94,5 +94,5 @@ export function myContext() {
     return result;
   }
 
-  console.log(apply(print, person, ["Frontend", "worker"]));
+  console.log(apply(print, person, ['Frontend', 'worker']));
 }
