@@ -4,16 +4,12 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import context from './JavaScript/main/11-RegExp';
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
-context();
 
 
 // If you want your app to work offline and load faster, you can change

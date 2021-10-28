@@ -28,12 +28,12 @@
 // console.log(y());
 
 function x(func) {
-  const secret = "007";
+  const secret = '007';
   return func();
 }
 
 function makeCounter() {
-  var count = 0;
+  let count = 0;
 
   return {
     getCount: () => count,
@@ -57,7 +57,7 @@ function makePassword(password) {
   return (passwordGuess) => passwordGuess === password;
 }
 
-const confirmPassword = makePassword("12345");
+const confirmPassword = makePassword('12345');
 
 function multN(n) {
   return (number) => number * n;
@@ -68,7 +68,7 @@ const getNumber = multN(2);
 const fib = [1, 2, 3, 5, 8, 13];
 
 function loop() {
-  for (var i = 0; i < 5000000000; i++) {
+  for (let i = 0; i < 5000000000; i++) {
     // (function (k) {
     //   setTimeout(function () {
     //     console.log(k, fib[k]);
@@ -77,6 +77,6 @@ function loop() {
   }
 }
 
-console.time("Log");
+console.time('Log');
 loop();
-console.timeEnd("Log");
+console.timeEnd('Log');
