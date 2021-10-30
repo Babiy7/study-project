@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+// import { Employee } from './JavaScript/patterns/factories/factories';
+// import './JavaScript/main/8-prototype';
+import './JavaScript/patterns/CreationalDesign/Prototype/Prototype';
 
-import context from './JavaScript/main/11-RegExp';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +15,7 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-context();
+// context();
 
 
 // If you want your app to work offline and load faster, you can change

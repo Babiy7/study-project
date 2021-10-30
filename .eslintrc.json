@@ -29,7 +29,7 @@
         "no-use-before-define": "off",
         "no-param-reassign": "off",
         "linebreak-style": "off",
-        "max-classes-per-file": "off"
-       
+        "max-classes-per-file": "off",
+        "import/prefer-default-export": "off"
     }
 }
