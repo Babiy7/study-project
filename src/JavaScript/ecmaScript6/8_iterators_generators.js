@@ -5,12 +5,12 @@ function makeIterator(array) {
     next() {
       return nextIndex < array.length
         ? {
-            value: array[nextIndex++],
-            done: false,
-          }
+          value: array[nextIndex++],
+          done: false,
+        }
         : {
-            done: true,
-          };
+          done: true,
+        };
     },
   };
 }
@@ -26,21 +26,21 @@ const iterator = makeIterator([1, 2, 4, 5, 6, 6]);
 // console.log(iterator.next());
 
 const countries = {
-  map: ["ru", "use", "en", "uk"],
-  [Symbol.iterator]: function () {
+  map: ['ru', 'use', 'en', 'uk'],
+  [Symbol.iterator]() {
     let i = 0;
-    let map = this.map;
+    const { map } = this;
 
     return {
       next() {
         return i < map.length
           ? {
-              value: `${i + 1}. ${map[i++]}`,
-              done: false,
-            }
+            value: `${i + 1}. ${map[i++]}`,
+            done: false,
+          }
           : {
-              done: true,
-            };
+            done: true,
+          };
       },
     };
   },
@@ -51,10 +51,10 @@ const countries = {
 // }
 
 const championship = {
-  teams: ["real", "barca", "atletico", "betis", "levante"],
-  [Symbol.iterator]: function () {
+  teams: ['real', 'barca', 'atletico', 'betis', 'levante'],
+  [Symbol.iterator]() {
     let i = 0;
-    const teams = this.teams;
+    const { teams } = this;
 
     return {
       next() {
@@ -80,7 +80,7 @@ function get(url) {
 }
 
 function* myGenerator(number = 10) {
-  const name = yield get("https//google.com/feed");
+  const name = yield get('https//google.com/feed');
   console.log(name);
 }
 
@@ -88,7 +88,7 @@ const generator = myGenerator(5);
 
 console.log(generator.next());
 console.log(
-  generator.next([{ title: "news" }, { title: "news" }, { title: "news" }])
+  generator.next([{ title: 'news' }, { title: 'news' }, { title: 'news' }]),
 );
 // console.log(generator.next());
 // console.log(generator.next());
@@ -99,3 +99,9 @@ console.log(
 // console.log(generator.next());
 // console.log(generator.next());
 // console.log(generator.next());
+
+function* gen() {
+  return 'Oleg';
+}
+
+console.log(gen().next());

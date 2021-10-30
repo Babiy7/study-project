@@ -1,11 +1,11 @@
 const obj = {
-  name: "Owen",
+  name: 'Owen',
   year: 23,
-  toString: function () {
+  toString() {
     return Object.entries(this)
-      .filter((entrie) => entrie[0] !== "toString")
+      .filter((entrie) => entrie[0] !== 'toString')
       .map((entrie) => `${entrie[0]}: ${entrie[1]}`)
-      .join(", ");
+      .join(', ');
   },
 };
 
@@ -13,7 +13,7 @@ const obj = {
 
 //    methods
 
-//entries, keys, values, assign
+// entries, keys, values, assign
 
 const obj1 = {
   a: 2,
@@ -23,8 +23,13 @@ const obj1 = {
 
 const obj2 = {
   b: 5,
+  person: {
+    name: 'oleg',
+  },
 };
 
-console.log(Object.assign({}));
+const obj2Copy = JSON.parse(JSON.stringify(obj2));
+
+console.log(obj2.person === obj2Copy.person);
 
 // console.log(obj1);
