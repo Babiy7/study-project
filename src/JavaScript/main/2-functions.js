@@ -1,8 +1,10 @@
+/* eslint-disable prefer-rest-params */
+// Function Declaration
 function x() {}
 
 x();
 
-// функціональний вираз
+// Function Expression
 const y = () => {};
 
 // export function context() {
@@ -48,22 +50,43 @@ const y = () => {};
 //   const x = 4;
 // }
 
-const obj = {
-  a: 9,
-  b: 10,
-  sum() {
-    const first = () => {
-      const second = () => {
-        console.log(this);
-      };
-
-      second();
+const test = {
+  name: 'test object',
+  createAnonFunction() {
+    return function () {
+      console.log(this.name);
+      console.log(arguments);
     };
+  },
 
-    first();
+  createArrowFunction() {
+    return () => {
+      console.log(this.name);
+      console.log(arguments);
+    };
   },
 };
 
-obj.sum();
+test.createAnonFunction('name', 'Oleg')();
+test.createArrowFunction('name', 'Oleg')();
 
 // 1) Звичайна функція: this = window, global. Use strict = undefined;
+
+// Втрата контексту
+
+let user = {
+  name: 'Oleg',
+  sayHi() {
+    console.log(`Hi, ${this.name}`);
+  },
+};
+
+const sayHi = user.sayHi.bind(user);
+
+setTimeout(sayHi, 1000);
+
+user = {
+  sayHi() {
+    console.log(`Hi, ${this.name}`);
+  },
+};

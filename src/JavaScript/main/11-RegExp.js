@@ -21,11 +21,11 @@ function context() {
 
   // console.log(string.match(reg));
 
-  const str = 'My name is R2D2';
+  // const str = 'My name is R2D2';
 
-  const result = str.match(/(\w\d){2}/g);
+  // const result = str.match(/(\w\d){2}/g);
 
-  console.log(Array.from(result));
+  // console.log(Array.from(result));
 
   // methods String
   // split, search, match, matchAll
@@ -34,6 +34,14 @@ function context() {
   // replace - приймає два аргументи регулярний вираз і другим те що потрібно замінити
   // matchAll - приймає регулярку і повертає ітеруємий об'єкт який потрібно перебрати, і як
   // результат ти отримуєш массив з кожним співпадінням
+
+  const number = '((((()))))))';
+
+  const result = number.match(/\(/g);
+  const result2 = number.match(/\)/g);
+
+  console.log('result', result.length);
+  console.log('result2', result2.length);
 
   // methods RegExp
   // test, exec
