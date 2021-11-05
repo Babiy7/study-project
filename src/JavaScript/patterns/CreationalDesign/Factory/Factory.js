@@ -7,7 +7,6 @@ class Employee {
     this.employee = null;
   }
 
-
   create(type) {
     let { employee } = this;
 
