@@ -72,21 +72,4 @@ test.createArrowFunction('name', 'Oleg')();
 
 // 1) Звичайна функція: this = window, global. Use strict = undefined;
 
-// Втрата контексту
 
-let user = {
-  name: 'Oleg',
-  sayHi() {
-    console.log(`Hi, ${this.name}`);
-  },
-};
-
-const sayHi = user.sayHi.bind(user);
-
-setTimeout(sayHi, 1000);
-
-user = {
-  sayHi() {
-    console.log(`Hi, ${this.name}`);
-  },
-};

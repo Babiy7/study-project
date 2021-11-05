@@ -4,10 +4,9 @@ import './App.scss';
 
 function App() {
   const [n, setN] = useState();
-  console.log('dsfsd', n);
   return (
     <div className="App">
-      <BEM />
+      {/* <BEM /> */}
       {/* <div className="box" />
       <div className="container">
         <div className="item red" />
@@ -20,8 +19,3 @@ function App() {
 }
 
 export default App;
-
-const array = [1, 2, 3, 4, 5];
-
-
-console.log();

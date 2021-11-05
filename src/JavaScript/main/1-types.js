@@ -24,3 +24,22 @@
 // console.log(typeof test8 + " array");
 // console.log(typeof test9 + " function");
 // console.log(typeof test10 + " null");
+// console.log([] + 1 + 2); // 12
+// console.log({} + 1 + 2); // 3
+// console.log((1,5 - 1) * 2); // 8
+// console.log((1.5 - 1) * 2); // 2
+
+let user = {
+  sayHi: function() {
+    console.log(this);
+  }
+};
+
+(user.sayBye = user.sayHi)();
+(user.sayBye)()
+
+if (0) {
+  console.log(true);
+} else {
+  console.log(false);
+}
