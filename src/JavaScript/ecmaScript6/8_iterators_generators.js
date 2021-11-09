@@ -73,23 +73,51 @@ const championship = {
 
 // console.log(Object.keys(countries).join());
 
-//   generators
+//
+//  =========== GENERATORS ===========
+//
 
-function get(url) {
-  return url;
+function get(callback, url, isSuccess) {
+  return callback(url, isSuccess);
 }
 
-function* myGenerator(number = 10) {
-  const name = yield get('https//google.com/feed');
-  console.log(name);
+function put(response) {
+  return response;
 }
 
-const generator = myGenerator(5);
+function request(url) {
+  let promise = null;
+  const isSuccess = Math.round(Math.random() * 1);
 
-console.log(generator.next());
-console.log(
-  generator.next([{ title: 'news' }, { title: 'news' }, { title: 'news' }]),
-);
+  if (isSuccess) {
+    promise = Promise.resolve([{ title: 'news' }, { title: 'news' }, { title: 'news' }]);
+  } else {
+    promise = Promise.reject(`error ${url}`);
+  }
+
+  return promise;
+}
+
+function* getPosts() {
+  try {
+    const response = yield get(request, 'https//google.com/feed');
+    yield put(response);
+  } catch (e) {
+    yield put(e);
+  }
+}
+
+const generator = getPosts(5);
+
+generator.next().value
+  .then(res => console.log(generator.next(res).value))
+  .catch(e => console.log(generator.next(e)));
+
+// console.log(generator.next());
+// console.log(
+//   generator.next([{ title: 'news' }, { title: 'news' }, { title: 'news' }]),
+// );
+// console.log(generator.next());
 // console.log(generator.next());
 // console.log(generator.next());
 // console.log(generator.next());
@@ -105,3 +133,9 @@ function* gen() {
 }
 
 console.log(gen().next());
+
+const array = [10, 20, 30, 40, 50];
+
+const iter = array[Symbol.iterator]();
+
+console.log(iter.next());
