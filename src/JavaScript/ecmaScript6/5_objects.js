@@ -33,3 +33,19 @@ const obj2Copy = JSON.parse(JSON.stringify(obj2));
 console.log(obj2.person === obj2Copy.person);
 
 // console.log(obj1);
+
+const person = {
+  name: 'Oleg',
+  age: 25,
+};
+
+Object.defineProperty(person, 'id', {
+  value: 7896,
+  enumerable: true,
+  writable: false,
+  configurable: false,
+});
+
+console.log('person', person);
+
+Object.defineProperties()
