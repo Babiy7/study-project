@@ -17,47 +17,9 @@ function memo(fn) {
   };
 }
 
-const factorial = memo((x) => ((!x || x === 1) ? 1 : x * factorial(x - 1)));
+const factorial = (x) => ((!x || x === 1) ? 1 : x * factorial(x - 1));
 
 console.time('start');
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
 factorial(500);
 factorial(500);
 factorial(500);
