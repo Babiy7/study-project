@@ -1,3 +1,6 @@
+const _ = require('lodash');
+
+/* eslint-disable prefer-arrow-callback */
 function memo(fn) {
   const cache = {};
 
@@ -17,24 +20,31 @@ function memo(fn) {
   };
 }
 
-const factorial = (x) => ((!x || x === 1) ? 1 : x * factorial(x - 1));
+const factorial = _.memoize((x) => {
+  console.log('x', x);
+  return (!x || x === 1) ? 1 : x * factorial(x - 1);
+});
 
-console.time('start');
-factorial(500);
-factorial(500);
-factorial(500);
-factorial(500);
-console.timeEnd('start');
+factorial(10);
+factorial(10);
+console.log(factorial(10));
+
+// console.time('start');
+// factorial(500);
+// factorial(500);
+// factorial(500);
+// factorial(500);
+// console.timeEnd('start');
 
 // console.log(`result = ${factorial(5)}`);
 // console.log(`result = ${factorial(6)}`);
 // console.log(`result = ${factorial(6)}`);
 
-const plus = memo((x, y, z = 0) => {
-  console.log(`arguments: ${x}, ${y}`);
-  return x + y + z;
-});
+// const plus = memo((x, y, z = 0) => {
+//   console.log(`arguments: ${x}, ${y}`);
+//   return x + y + z;
+// });
 
-console.log(`results: ${plus(10, 10)}`);
-console.log(`results: ${plus(10, 10)}`);
-console.log(`results: ${plus(10, 10, 10)}`);
+// console.log(`results: ${plus(10, 10)}`);
+// console.log(`results: ${plus(10, 10)}`);
+// console.log(`results: ${plus(10, 10, 10)}`);
