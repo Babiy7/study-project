@@ -1,0 +1,40 @@
+.form {
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: gray 1px solid;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input {
+    width: 93%;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__input:valid {
+    border: 2px solid green;
+  }
+
+  &__input:invalid {
+    border: 2px solid red;
+  }
+
+  &__button {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: white;
+    outline: none;
+    border: solid gray 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+  }
+}

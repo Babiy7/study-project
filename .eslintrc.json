@@ -1,37 +1,39 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": ["plugin:react/recommended", "airbnb"],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": ["react"],
-    "rules": {
-        "no-unused-vars": "warn",
-        "no-console": "off",
-        "no-shadow": "off",
-        "no-alert": "off",
-        "no-plusplus": "off",
-        "one-var": "off",
-        "radix": "off",
-        "consistent-return": "off",
-        "no-restricted-globals": "off",
-        "no-use-before-define": "off",
-        "no-param-reassign": "off",
-        "linebreak-style": "off",
-        "max-classes-per-file": "off",
-        "import/prefer-default-export": "off",
-        "max-len": "warn",
-        "class-methods-use-this": "off"
-    }
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    // "no-unused-vars": "warn",
+    // "no-console": "off",
+    // "no-shadow": "off",
+    // "no-alert": "off",
+    // "no-plusplus": "off",
+    // "one-var": "off",
+    // "radix": "off",
+    // "consistent-return": "off",
+    // "no-restricted-globals": "off",
+    // "no-use-before-define": "off",
+    // "no-param-reassign": "off",
+    // "linebreak-style": "off",
+    // "max-classes-per-file": "off",
+    // "import/prefer-default-export": "off",
+    // "max-len": "warn",
+    // "class-methods-use-this": "off"
+    "no-debugger": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
 }
