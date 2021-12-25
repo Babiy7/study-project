@@ -11,6 +11,7 @@
   position: relative;
 
   margin: auto;
+  border: red solid 1px;
 }
 
 // .item {
@@ -21,6 +22,14 @@
 
 //   border-radius: 50%;
 // }
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+
+  border-radius: 50%;
+}
 
 .red {
   top: 0;
@@ -101,8 +110,16 @@
     transform: translate(0, 0);
   }
 
+  25% {
+    opacity: 0.5;
+  }
+
   50% {
     transform: translate(-60px, 60px);
+  }
+
+  75% {
+    opacity: 0.5;
   }
 
   100% {
@@ -115,8 +132,16 @@
     transform: translate(0, 0);
   }
 
+  25% {
+    opacity: 0.5;
+  }
+
   50% {
     transform: translate(-60px, -60px);
+  }
+
+  75% {
+    opacity: 0.5;
   }
 
   100% {
@@ -129,8 +154,16 @@
     transform: translate(0, 0);
   }
 
+  25% {
+    opacity: 0.5;
+  }
+
   50% {
     transform: translate(60px, -60px);
+  }
+
+  75% {
+    opacity: 0.5;
   }
 
   100% {

@@ -4,7 +4,7 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import { Employee } from './JavaScript/patterns/factories/factories';
-import './JavaScript/main/13-context-call-apply-bind';
+// import './JavaScript/main/13-context-call-apply-bind';
 // import './JavaScript/patterns/CreationalDesign/Prototype/Prototype';
 // import './JavaScript/OOD__ObjectOrientedDesign/SOLID/4. I'
 // import './JavaScript/OOD__ObjectOrientedDesign/SOLID/3. L'
