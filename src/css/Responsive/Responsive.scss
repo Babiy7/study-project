@@ -1,0 +1,92 @@
+@import '../../styles/variables.scss';
+@import '../../styles/helpers.scss';
+
+.responsive {
+  width: 100%;
+  height: 99%;
+
+  @include border(gray);
+
+  &__header {
+    height: 27%;
+    @include border();
+    margin: $m-1;
+    @extend %centered-content;
+  }
+
+  &__body {
+    height: 50%;
+
+    display: flex;
+
+    margin: $m-1;
+    @include border(green);
+
+    &__side-bar {
+      width: 30%;
+      margin: $m-1;
+      @include border(blue);
+      @extend %centered-content;
+    }
+
+    &__content {
+      width: 68%;
+      margin: $m-1;
+      @include border(black);
+      @extend %centered-content;
+    }
+  }
+
+  &__footer {
+    height: 17%;
+    margin: $m-1;
+    @include border(yellow);
+    @extend %centered-content;
+  }
+}
+
+// desktop
+@media screen and (max-width: 1200px) {
+  .responsive {
+    @include border();
+  }
+}
+
+// laptop
+@media screen and (max-width: 1024px) {
+  .responsive {
+    &__body {
+      &__side-bar {
+        width: 40%;
+      }
+
+      &__content {
+        width: 55%;
+      }
+    }
+  }
+}
+
+// tablet
+@media screen and (max-width: 768px) {
+  .responsive {
+    &__body {
+      flex-direction: column;
+      align-items: center;
+
+      &__side-bar {
+        width: 95%;
+        height: 45%;
+      }
+
+      &__content {
+        width: 95%;
+        height: 45%;
+      }
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 480px) {
+}

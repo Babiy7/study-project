@@ -1,0 +1,11 @@
+// extend
+//
+%centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin border($color: red, $size: 2px, $type: solid) {
+  border: $color $size $type;
+}

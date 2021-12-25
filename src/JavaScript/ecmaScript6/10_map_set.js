@@ -16,7 +16,19 @@ for (const value of map.keys()) {
 
 // console.log(arr);
 
-const set = new Set([1, 1, 2, 3, 5, 8, 13, 13, 8, { name: 'nama' }, { name: 'nama' }]);
+const set = new Set([
+  1,
+  1,
+  2,
+  3,
+  5,
+  8,
+  13,
+  13,
+  8,
+  { name: 'nama' },
+  { name: 'nama' },
+]);
 
 console.log('set', set);
 

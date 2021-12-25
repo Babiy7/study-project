@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import BEM from './css/BEM/BEM';
 import Form from './ReactJs/Form/Form';
 import Select from './ReactJs/Select/Select';
+import Responsive from './css/Responsive/Responsive';
 import './App.scss';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
         <div className="item green" />
         <div classsName="item blue" />
       </div> */}
-      <Form
+      <Responsive />
+      {/* <Form
         inputsData={[
           {
             type: 'text',
@@ -39,8 +41,8 @@ function App() {
             text: 'Save',
           },
         ]}
-      />
-      <Select
+      /> */}
+      {/* <Select
         options={[
           {
             value: 'one',
@@ -55,7 +57,7 @@ function App() {
             option: 'Three',
           },
         ]}
-      />
+      /> */}
     </div>
   );
 }
