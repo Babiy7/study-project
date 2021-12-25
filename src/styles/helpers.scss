@@ -9,3 +9,7 @@
 @mixin border($color: red, $size: 2px, $type: solid) {
   border: $color $size $type;
 }
+
+@mixin shadow($right: 1px, $bottom: 15px, $blur: 25px, $spread: 0px, $color: rgba(0,0,0,0.09)) {
+  box-shadow: $right $bottom $blur $spread $color;
+}
