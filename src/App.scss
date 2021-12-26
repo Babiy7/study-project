@@ -15,6 +15,16 @@
   border: red solid 1px;
 }
 
+.box-sizing {
+  width: 500px;
+  height: 500px;
+  padding: 50px;
+  background: black;
+  // box-sizing: border-box;
+  border: red solid 20px;
+  box-sizing: content-box;
+}
+
 // .item {
 //   width: 40px;
 //   height: 40px;

@@ -3,7 +3,8 @@
 .positioning {
   position: relative;
   width: 700px;
-  padding-top: 100px;
+  padding-top: 250px;
+  
 
   &__tab {
     width: 685px;
@@ -17,12 +18,18 @@
 
     &_sticky {
       position: sticky;
-
-      top: -1px;
     }
 
     &_fixed {
       position: fixed;
+    }
+
+    &_absolute {
+      position: absolute;
+    }
+
+    &_relative {
+      position: relative;
     }
   }
 

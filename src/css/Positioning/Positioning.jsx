@@ -11,15 +11,23 @@ const Positioning = ({
     <div
       className={`positioning__tab positioning__tab_${name}`}
       style={{
-        top, left, right, bottom,
+        top,
+        left,
+        right,
+        bottom,
       }}
     >
       Tab
+
       {' '}
       {name}
     </div>
-    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-      <div className="positioning__block">{item}</div>
+    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => (
+      <div className="positioning__block">
+        item
+        {' '}
+        {item}
+      </div>
     ))}
   </div>
 );

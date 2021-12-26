@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Form from './ReactJs/Form/Form';
 import Select from './ReactJs/Select/Select';
 import Positioning from './css/Positioning/Positioning';
+import Basic from './css/Basic/Basic';
 // import Responsive from './css/Responsive/Responsive';
 import './App.scss';
 
@@ -17,8 +18,10 @@ function App() {
         <div className="circle green" />
         <div className="circle blue" />
       </div> */}
-      <Positioning tabPosition={{ name: 'fixed', top: '-1px' }} />
+      {/* <Positioning tabPosition={{ name: 'sticky', top: '-150px' }} /> */}
+      {/* <div className="box-sizing" /> */}
       {/* <Responsive /> */}
+      <Basic />
       {/* <Form
         inputsData={[
           {
