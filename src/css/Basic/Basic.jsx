@@ -28,26 +28,122 @@ const Basic = (props) => {
       name: '!important',
       fontSize: 35,
     },
-  ].map(({ name, fontSize }, i) => {
-    console.log();
+  ].map(({ name, fontSize }, i) => (
+    <div
+      className="basic__specifications__specification"
+      style={{
+        width: (i + 1) * 80,
+        height: (i + 1) * 70,
+        position: 'absolute',
+        top: (i + 1) * 50,
+        left: (i + 1) * 20,
+        background: `rgb(255, ${(i + 1) * 30}, ${(i + 1) * 30})`,
+        boxShadow: `${i * 3}px ${i * 3}px ${i * 6}px ${i * 2}px rgb(0, 0, 0, 30%)`,
+      }}
+    >
+      <h2 className="basic__specifications__specification__title" style={{ fontSize }}>{name}</h2>
+    </div>
+  ));
 
-    return (
-      <div
-        className="basic__specifications__specification"
-        style={{
-          width: (i + 1) * 110,
-          height: (i + 1) * 110,
-          position: 'absolute',
-          top: (i + 1) * 50,
-          left: (i + 1) * 20,
-          background: `rgb(255, ${(i + 1) * 30}, ${(i + 1) * 30})`,
-          // boxShadow: `${i + 3}, ${i + 3}, ${i + 4}, ${i + 1}, rgb(0, 0, 0, 30%)`,
-        }}
-      >
-        <h2 className="basic__specifications__specification__title" style={{ fontSize }}>{name}</h2>
+  const Combinators = () => (
+    <>
+      <div className="combinators__container">
+        <code>
+          ul
+          {' '}
+          {'>'}
+          {' '}
+          li
+        </code>
+        <h1>
+          List
+          {' '}
+          <code>ul</code>
+        </h1>
+        <ul>
+          <li>
+            <code>li</code>
+            {' '}
+            Line 1
+          </li>
+          <li>
+            <code>li</code>
+            {' '}
+            Line 2
+          </li>
+          <li>
+            <h2>
+              List
+              {' '}
+              <code>ol</code>
+            </h2>
+            <ol>
+              <li>
+                <code>li</code>
+                {' '}
+                line 1
+              </li>
+              <li>
+                <code>li</code>
+                {' '}
+                line 2
+              </li>
+            </ol>
+          </li>
+        </ul>
       </div>
-    );
-  });
+      <div className="combinators__container">
+        <code>h1 + p</code>
+        <h1>Heading</h1>
+        <p>
+          <code>p</code>
+          {' '}
+          Lorem ipsum dolor
+        </p>
+        <p>
+          <code>p</code>
+          {' '}
+          Lorem ipsum dolor
+        </p>
+        <p>
+          <code>p</code>
+          {' '}
+          Lorem ipsum dolor
+        </p>
+      </div>
+      <div className="combinators__container">
+        <code>h1 ~ p</code>
+        <h2>Heading 2</h2>
+        <p>
+          <code>p</code>
+          {' '}
+          Lorem ipsum dolor
+        </p>
+        <div>div Lorem ipsum dolor</div>
+        <p>
+          <code>p</code>
+          {' '}
+          Lorem ipsum dolor
+        </p>
+        <p>
+          <code>p</code>
+          {' '}
+          Lorem ipsum dolor
+        </p>
+        <div>div Lorem ipsum dolor</div>
+        <p>
+          <code>p</code>
+          {' '}
+          Lorem ipsum dolor
+        </p>
+        <p>
+          <code>p</code>
+          {' '}
+          Lorem ipsum dolor
+        </p>
+      </div>
+    </>
+  );
 
   return (
     <div className="basic">
@@ -76,9 +172,7 @@ const Basic = (props) => {
         <h1 className="basic__specifications__title">Specifications</h1>
         {specifications()}
       </div>
-      <div className="basic__combinators">
-        sfdf
-      </div>
+      <Combinators />
     </div>
   );
 };

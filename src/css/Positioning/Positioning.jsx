@@ -18,7 +18,6 @@ const Positioning = ({
       }}
     >
       Tab
-
       {' '}
       {name}
     </div>

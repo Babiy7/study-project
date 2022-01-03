@@ -17,12 +17,12 @@
   }
 
   &__box-shadow {
-    background-color: #ffedf1 !important;
+    background-color: #ffdefc !important;
     @include shadow(15px, 15px, 35px, 10px, rgb(0, 0, 0, 23%));
   }
 
   &__box-sizing {
-    background-color: #e6b3db !important;
+    background-color: $pink !important;
     padding: $p-1;
 
     &_border-box {
@@ -31,7 +31,7 @@
     
     &_content-box {
       box-sizing: content-box;
-      @include border(#fad7f8, 20px);
+      @include border($white-pink, 20px);
     }
   }
 
@@ -57,7 +57,6 @@
     &__specification {
       position: relative;
       box-sizing: border-box;
-      @include shadow(15px, 15px, 25px, 10px, rgb(0, 0, 0, 29%));
       
       &__title {
         position: relative;
@@ -71,7 +70,28 @@
     &__title {
       position: absolute;
       top: 0;
-      right: 65px;
+      right: 250px;
     }
+  }
+
+  .combinators__container {
+    width: 400px;
+    height: 320px;
+    margin: $m-2;
+    padding: $p-2;
+
+    @include border($white-pink, 10px);
+  }
+
+  ul > li {
+    border-bottom: 3px solid $white-pink;
+  }
+
+  h1 + p {
+    background-color: $pink;
+  }
+
+  h2 ~ p {
+    background-color: $pink;
   }
 }

@@ -1,16 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 // import BEM from './css/BEM/BEM';
 import Form from './ReactJs/Form/Form';
 import Select from './ReactJs/Select/Select';
 import Positioning from './css/Positioning/Positioning';
 import Basic from './css/Basic/Basic';
-// import Responsive from './css/Responsive/Responsive';
+import Responsive from './css/Responsive/Responsive';
+import { getPeople } from './redux/actionCreators/people';
+import { getPlanets } from './redux/actionCreators/planets';
+import { peopleSelector } from './redux/selectors/people';
 import './App.scss';
 
 function App() {
-  const [n, setN] = useState();
+  const state = useSelector((state) => state);
+  const { peopleData, peopleLoading, peopleError } = useSelector(peopleSelector);
+  const dispatch = useDispatch();
+
+  console.log('peopleData', peopleData);
+  console.log('peopleLoading', peopleLoading);
+  console.log('peopleError', peopleError);
+
   return (
     <div className="App">
+      <button
+        type="button"
+        onClick={() => {
+          dispatch(getPeople());
+          dispatch(getPlanets());
+        }}
+      >
+        Click me
+      </button>
       {/* <BEM /> */}
       {/* <div className="container">
         <div className="circle red" />
@@ -66,4 +86,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

@@ -36,6 +36,7 @@
     "no-debugger": "warn",
     "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": "off",
-    "import/no-cycle": ["error", { "maxDepth": "∞" }]
+    "import/no-cycle": ["error", { "maxDepth": "∞" }],
+    "require-yield": "error"
   }
 }
