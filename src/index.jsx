@@ -8,6 +8,7 @@ import store from './redux/index';
 // import './JavaScript/ecmaScript6/2_arrow_functions';
 import './JavaScript/main/8-prototype';
 import './JavaScript/ecmaScript6/8_iterators_generators';
+import './JavaScript/ecmaScript6/7_symbols';
 // import './scriptSofia';
 
 ReactDOM.render(
