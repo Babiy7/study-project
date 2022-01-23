@@ -9,20 +9,21 @@ import Responsive from './css/Responsive/Responsive';
 import { getPeople } from './redux/actionCreators/people';
 import { getPlanets } from './redux/actionCreators/planets';
 import { peopleSelector } from './redux/selectors/people';
+import { planetsSelector } from './redux/selectors/planets';
 import './App.scss';
 
 function App() {
   const state = useSelector((state) => state);
   const { peopleData, peopleLoading, peopleError } = useSelector(peopleSelector);
+  const { planetsData, planetsLoading, planetsError } = useSelector(planetsSelector);
   const dispatch = useDispatch();
 
   console.log('peopleData', peopleData);
-  console.log('peopleLoading', peopleLoading);
-  console.log('peopleError', peopleError);
+  console.log('planetsData', planetsData);
 
   return (
     <div className="App">
-      <button
+      {/* <button
         type="button"
         onClick={() => {
           dispatch(getPeople());
@@ -30,7 +31,7 @@ function App() {
         }}
       >
         Click me
-      </button>
+      </button> */}
       {/* <BEM /> */}
       {/* <div className="container">
         <div className="circle red" />
@@ -38,10 +39,10 @@ function App() {
         <div className="circle green" />
         <div className="circle blue" />
       </div> */}
-      {/* <Positioning tabPosition={{ name: 'sticky', top: '-150px' }} /> */}
+      <Positioning tabPosition={{ name: 'sticky', top: '-150px' }} />
       {/* <div className="box-sizing" /> */}
       {/* <Responsive /> */}
-      <Basic />
+      {/* <Basic /> */}
       {/* <Form
         inputsData={[
           {

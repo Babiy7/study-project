@@ -3,7 +3,7 @@ function createProgrammer(name) {
   return {
     ...programmer,
     ...canCode(programmer),
-  }
+  };
 }
 
 function createFrontend(name) {
@@ -13,7 +13,7 @@ function createFrontend(name) {
     ...canReact(programmer),
     ...canVue(programmer),
     ...canAngular(programmer),
-  }
+  };
 }
 
 function createBackend(name) {
@@ -22,7 +22,7 @@ function createBackend(name) {
   return {
     ...programmer,
     ...canNodejs(programmer),
-  }
+  };
 }
 
 function createFullstack(name) {
@@ -34,37 +34,37 @@ function createFullstack(name) {
     ...canReact(programmer),
     ...canVue(programmer),
     ...canAngular(programmer),
-  }
+  };
 }
 
 function canCode({ name }) {
   return {
     code: () => console.log(`${name} is coding...`),
-  }
+  };
 }
 
 function canReact({ name }) {
   return {
     react: () => console.log(`${name} is creating a react app...`),
-  }
+  };
 }
 
 function canAngular({ name }) {
   return {
     angular: () => console.log(`${name} is creating a angular app...`),
-  }
+  };
 }
 
 function canVue({ name }) {
   return {
     vue: () => console.log(`${name} is creating a vue app...`),
-  }
+  };
 }
 
 function canNodejs({ name }) {
   return {
     nodejs: () => console.log(`${name} is creating a nodejs app...`),
-  }
+  };
 }
 
 const programmer = createProgrammer('Oleg');

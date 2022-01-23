@@ -39,5 +39,35 @@
     margin: $m-2;
     @extend %centered-content;
     @include border(black);
+
+    &__title {
+      &::first-letter {
+        color: red;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+    }
+
+    p:first-child {
+      color: green;
+      margin-right: 8px;
+    }
   }
 }
+
+// Pseudo-classes
+//
+// first-child
+// last-child
+// active
+// hover
+// focus
+// valid
+// required
+
+// Pseudo-elements
+//
+// after
+// before
+// first-letter
+// first-line

@@ -1,3 +1,10 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable prefer-promise-reject-errors */
+/* eslint-disable require-yield */
+
+//
+// ========== CUSTOM ITERATOR ==========
+//
 function makeIterator(array) {
   let nextIndex = 0;
 
@@ -25,6 +32,13 @@ const iterator = makeIterator([1, 2, 4, 5, 6, 6]);
 // console.log(iterator.next());
 // console.log(iterator.next());
 
+//
+// =================================================================
+//
+
+//
+// ========== ITERATORS ==========
+//
 const countries = {
   map: ['ru', 'use', 'en', 'uk'],
   [Symbol.iterator]() {
@@ -74,6 +88,10 @@ const championship = {
 // console.log(Object.keys(countries).join());
 
 //
+// =================================================================
+//
+
+//
 //  =========== GENERATORS ===========
 //
 
@@ -110,8 +128,8 @@ function* getPosts() {
 const generator = getPosts(5);
 
 generator.next().value
-  .then(res => console.log(generator.next(res).value))
-  .catch(e => console.log(generator.next(e)));
+  .then((res) => console.log(generator.next(res).value))
+  .catch((e) => console.log(generator.next(e)));
 
 // console.log(generator.next());
 // console.log(

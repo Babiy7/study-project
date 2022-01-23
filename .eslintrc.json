@@ -18,7 +18,7 @@
   "plugins": ["react"],
   "rules": {
     "no-unused-vars": "warn",
-    "no-console": "warn",
+    "no-console": "off",
     "no-shadow": "off",
     "no-alert": "off",
     "no-plusplus": "off",
@@ -37,6 +37,8 @@
     "react/jsx-props-no-spreading": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-cycle": ["error", { "maxDepth": "∞" }],
-    "require-yield": "error"
+    "require-yield": "error",
+    "operator-linebreak": "off",
+    "comma-dangle": "off"
   }
 }

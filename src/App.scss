@@ -71,7 +71,6 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  animation: App-logo-spin infinite 2s ease;
 }
 
 @keyframes Red-circle {
@@ -92,7 +91,7 @@
   75% {
     opacity: 0.5;
   }
-
+  
   100% {
     transform: translate(0, 0);
     opacity: 1;

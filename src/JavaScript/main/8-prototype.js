@@ -1,3 +1,15 @@
+function Main() {}
+Main.prototype = { protected: true };
+
+const obj1 = new Main();
+Main.prototype = { protected: false };
+
+const obj2 = new Main();
+
+// console.log('Object1 protection: ', obj1.protected);
+// console.log('Object2 protection: ', obj2.protected);
+
+// CLASS OBJECT
 class Animal {
   constructor(name, age) {
     this.name = name;
@@ -10,11 +22,19 @@ class Animal {
   }
 }
 
+// =================================================================
+
+// LITERAL OBJECT
+
 const person = {
   name: 'Oleg',
   age: 23,
 };
-export function Dog(name, breed, weight) {
+
+// =================================================================
+
+// CONSTRUCTOR OBJECT
+function Dog(name, breed, weight) {
   this.name = name;
   this.breed = breed;
   this.weight = weight;
@@ -50,21 +70,19 @@ Dog.prototype.sit = function () {
 const dog = new Dog('name', 'breed', 'weight');
 const animal = new Animal('Гарфілд', 5);
 
-console.log('person literal', person);
-console.log('animal class', animal);
-console.log('dog constructor', dog);
+// =================================================================
 
-function Main() {}
-Main.prototype = { protected: true };
+// OBJECT CREATE
 
-const obj1 = new Main();
-Main.prototype = { protected: false };
+const cat = Object.create(Animal.prototype, { name: { value: 'Grafield' }, age: { value: 3 } });
 
-const obj2 = new Main();
+// console.log('car object create:', cat);
 
-console.log('Object1 protection: ', obj1.protected);
-console.log('Object2 protection: ', obj2.protected);
+// =================================================================
 
+// console.log('person literal', person);
+// console.log('animal class', animal);
+// console.log('dog constructor', dog);
 
 // console.log('person', person);
 // console.log('dog', dog);

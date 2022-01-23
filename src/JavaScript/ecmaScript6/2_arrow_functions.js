@@ -1,30 +1,37 @@
-const sum = (a, b) => {
-  return a + b;
-};
+/* eslint-disable prefer-arrow-callback */
+const sum = (a, b) => a + b;
 
 // context
 
-function log() {
-  console.log(this);
-}
-
-const arrowLog = () => {
-  console.log(this);
-};
-
 const person = {
-  name: "Oleg",
+  name: 'Oleg',
   year: 23,
-  log: log,
-  arrowLog: function () {
-    arrowLog();
+  printPerson() {
+    console.log('printPerson', this);
   },
-  delay: function () {
+  printWindowOrGlobal: () => {
+    console.log('printWindowOrGlobal', this);
+  },
+  print() {
+    const printPerson = () => console.log('print printPerson', this);
+    printPerson();
+  },
+  delayWithArrowCallback() {
     setTimeout(() => {
-      console.log(this.name, this.year);
+      // силається на person
+      console.log('delayWithArrowCallback', this);
     }, 500);
   },
+  delayWithDeclarativeFunction() {
+    setTimeout(function () {
+      // силається на window
+      console.log('delayWithDeclarativeFunction', this);
+    }, 500);
+  }
 };
+
+person.delayWithArrowCallback();
+person.delayWithDeclarativeFunction();
 
 // person.log();
 // person.arrowLog();

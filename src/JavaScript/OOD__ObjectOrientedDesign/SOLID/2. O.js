@@ -14,7 +14,7 @@ class Square extends Shape {
   }
 
   area() {
-    return (this.size ** 2) * Math.PI;
+    return this.size ** 2 * Math.PI;
   }
 }
 
@@ -36,9 +36,7 @@ class AreaCalculator {
   }
 
   sum() {
-    return this.shapes.reduce((acc, shape) => {        
-      return acc + shape.area();
-    })
+    return this.shapes.reduce((acc, shape) => acc + shape.area());
   }
   //
   // Це не правильно тому що якщо з'являється новий функціонал нам потрібно змінювати метод sum додавати нові кейси, в такому випадку краще винести якусь
@@ -62,9 +60,6 @@ class AreaCalculator {
   // }
 }
 
-const calculator = new AreaCalculator([
-  new Circle(5),
-  new Square(10),
-]);
+const calculator = new AreaCalculator([new Circle(5), new Square(10)]);
 
 console.log('sum:', calculator.sum());

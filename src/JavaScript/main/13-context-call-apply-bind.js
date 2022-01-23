@@ -43,7 +43,6 @@ let user = {
 
 const sayHi = user.sayHi.bind(user);
 
-
 user = {
   name: 'Sofia',
   sayHi() {
@@ -60,68 +59,67 @@ const human = {
   age: 25,
 };
 
-
 function print(job, status) {
   console.log(this.name, this.age, job, status);
 
   return 1;
 }
-  // 
-  //  реалізація bind без встроєних методів
-  //
-  //  function bind(fn, context, ...rest) {
-  //   return function (...status) {
-  //     const uniqeId = Symbol("id");
+//
+//  реалізація bind без встроєних методів
+//
+//  function bind(fn, context, ...rest) {
+//   return function (...status) {
+//     const uniqeId = Symbol("id");
 
-  //     context[uniqeId] = fn;
+//     context[uniqeId] = fn;
 
-  //     context[uniqeId](...rest, ...status);
+//     context[uniqeId](...rest, ...status);
 
-  //     delete context[uniqeId];
-  //   };
-  // }
+//     delete context[uniqeId];
+//   };
+// }
 
-  // 
-  //  реалізація bind з встроєними методами
-  //
-  function bind(fn, context) {
-    const rest = Array.prototype.slice.call(arguments, 2);
-    return function () {
-      const args = Array.prototype.slice.call(arguments);
+//
+//  реалізація bind з встроєними методами
+//
+function bind(fn, context) {
+  const rest = Array.prototype.slice.call(arguments, 2);
+  return function () {
+    const args = Array.prototype.slice.call(arguments);
 
-      return fn.apply(context, rest.concat(args));
-    };
-  }
+    return fn.apply(context, rest.concat(args));
+  };
+}
 
-  // console.log(bind(print, person, "Frontend", "name", "job")("worker"));
-  // bind(print, person)("Frontend", "worker");
+// console.log(bind(print, person, "Frontend", "name", "job")("worker"));
+// bind(print, person)("Frontend", "worker");
 
-  // Call
+// Call
 
-  function call(fn, context, ...rest) {
-    const uniqeId = Symbol('id');
+function call(fn, context, ...rest) {
+  const uniqeId = Symbol('id');
 
-    context[uniqeId] = fn;
+  context[uniqeId] = fn;
 
-    context[uniqeId](...rest);
+  context[uniqeId](...rest);
 
-    delete context[uniqeId];
-  }
+  delete context[uniqeId];
+}
 
-  call(print, human, 'Frontend', 'I am not looking for a job');
+call(print, human, 'Frontend', 'I am not looking for a job');
 
-  // Apply
+// Apply
 
-  function apply(fn, context, args) {
-    const uniqeId = Symbol('id');
+function apply(fn, context, args) {
+  const uniqeId = Symbol('id');
 
-    context[uniqeId] = fn;
+  context[uniqeId] = fn;
 
-    const result = context[uniqeId](...args);
+  const result = context[uniqeId](...args);
 
-    delete context[uniqeId];
+  delete context[uniqeId];
 
-    return result;
-  }
+  return result;
+}
 
-  console.log(apply(print, human, ['Frontend', 'worker']));
+console.log(apply(print, human, ['Frontend', 'worker']));

@@ -22,7 +22,3 @@ export function* workerGetPlanetsSaga() {
 export function* watchGetPlanetsSaga() {
   yield takeEvery(GET_PLANETS, workerGetPlanetsSaga);
 }
-
-export default function* rootSaga() {
-  yield watchGetPlanetsSaga();
-}

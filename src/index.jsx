@@ -5,6 +5,10 @@ import { Provider } from 'react-redux';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/index';
+// import './JavaScript/ecmaScript6/2_arrow_functions';
+import './JavaScript/main/8-prototype';
+import './JavaScript/ecmaScript6/8_iterators_generators';
+// import './scriptSofia';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,7 +16,7 @@ ReactDOM.render(
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

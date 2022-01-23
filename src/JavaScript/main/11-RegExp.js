@@ -1,6 +1,5 @@
 // patterns
 
-
 function context() {
   // console.log('ANNA'.search(reg));
   // console.log('ANNA'.match(reg).length);
@@ -8,16 +7,13 @@ function context() {
   // console.log('ANNA'.replace(/./gi, '*'));
   // console.log(')(Oleg is a 44 profesionall footballer and he is 232'.match(/\d\d\S/));
 
-
   const string = '03-68-BC-01-02-03 Babiy 13:A8:BC:05-72:12 Oleg  03-68-BC-01-02-03 99:68:BC:01:02:03';
 
   // const reg = /[a-z\d]{2}([:-])(?:[a-z\d]{2}\1){4}[a-z\d]{2}/ig;
 
   // const string = 'olegbabiy77@gmail.com';
 
-
   // const reg = /[a-zA-Z\d]{2}([:-])(?:[a-zA-Z\d]{2}\1){4}[a-zA-Z\d]{2}/ig;
-
 
   // console.log(string.match(reg));
 
