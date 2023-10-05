@@ -14,13 +14,12 @@ class DataBase {
   }
 }
 
-console.log(DataBase.prototype);
-
 const mongo = new DataBase('Mongo');
 const sql = new DataBase('SQL');
+console.log('instance', DataBase.instance);
 
-console.log(mongo.prototype);
-console.log(sql.prototype);
+console.log(mongo);
+console.log(sql);
 
 // console.log(mongo.getData());
 // console.log(sql.getData());
@@ -33,9 +32,9 @@ function Singletone() {
   Singletone.instance = this;
 }
 
-const singletone1 = new Singletone();
-const singletone2 = new Singletone();
+// const singletone1 = new Singletone();
+// const singletone2 = new Singletone();
 
-console.log(Singletone);
+// console.log(Singletone);
 
-console.log(singletone1 === singletone2);
+// console.log(singletone1 === singletone2);

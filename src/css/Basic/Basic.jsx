@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Animations from './Animations';
 import './Basic.scss';
 
 const Basic = (props) => {
@@ -71,7 +72,7 @@ const Basic = (props) => {
             {' '}
             Line 2
           </li>
-          <li>
+          <div>
             <h2>
               List
               {' '}
@@ -89,7 +90,7 @@ const Basic = (props) => {
                 line 2
               </li>
             </ol>
-          </li>
+          </div>
         </ul>
       </div>
       <div className="combinators__container">
@@ -136,11 +137,18 @@ const Basic = (props) => {
           {' '}
           Lorem ipsum dolor
         </p>
-        <p>
+        {/* <p>
           <code>p</code>
           {' '}
           Lorem ipsum dolor
-        </p>
+        </p> */}
+        <div>
+          <p>
+            <code>div p</code>
+            {' '}
+            Lorem ipsum dolor
+          </p>
+        </div>
       </div>
     </>
   );
@@ -173,6 +181,7 @@ const Basic = (props) => {
         {specifications()}
       </div>
       <Combinators />
+      <Animations />
     </div>
   );
 };

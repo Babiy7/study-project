@@ -20,14 +20,20 @@ function memo(fn) {
   };
 }
 
-const factorial = _.memoize((x) => {
+const factorialMemoize = _.memoize((x) => {
   console.log('x', x);
-  return (!x || x === 1) ? 1 : x * factorial(x - 1);
+  return (!x || x === 1) ? 1 : x * factorialMemoize(x - 1);
 });
 
-factorial(10);
-factorial(10);
-console.log(factorial(10));
+const factorialMemo = memo((x) => ((!x || x === 1) ? 1 : x * factorialMemo(x - 1)));
+
+// factorialMemoize(10);
+// factorialMemoize(10);
+// console.log(factorialMemoize(10));
+
+factorialMemo(10);
+factorialMemo(10);
+console.log(factorialMemo(10));
 
 // console.time('start');
 // factorial(500);

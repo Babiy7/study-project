@@ -1,3 +1,5 @@
+@import './styles/helpers.scss';
+
 .App {
   height: 100vh;
 
@@ -13,6 +15,10 @@
 
   margin: auto;
   border: red solid 1px;
+
+  @include shadow(20px, 10px, 10px, 20px);
+  // background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%);
 }
 
 // .item {

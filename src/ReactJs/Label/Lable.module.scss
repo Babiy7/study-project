@@ -1,0 +1,18 @@
+@import '../../styles/index.scss';
+
+.label {
+  font-weight: bold;
+  padding: $p-2;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.large {
+  font-size: 27px;
+}
+
+.noPadding {
+  padding: 0;
+}

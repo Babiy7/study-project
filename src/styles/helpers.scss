@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 // extend
 //
 %centered-content {
@@ -14,6 +16,17 @@
   box-shadow: $right $bottom $blur $spread $color;
 }
 
+@mixin box($width: 200px, $height: 200px, $backgroundColor: $pink) {
+  width: $width;
+  height: $height;
+  background-color: $backgroundColor;
+  transition: 0.8s;
+  margin: $m-2;
+
+  @include shadow();
+  @extend %centered-content;
+}
+
 @mixin boxShadow($type: border-box) {
   width: 500px;
   height: 500px;
@@ -21,4 +34,14 @@
   background: black;
   border: red solid 20px;
   box-sizing: $type;
+}
+
+%transform-rotate {
+  transform: rotate(70deg);
+  transition: 0.8s;
+}
+
+@mixin transform($left: 50px, $top: 30px) {
+  transform: translate($left, $left);
+  transition: 0.8s;
 }

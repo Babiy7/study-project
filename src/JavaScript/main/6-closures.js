@@ -1,5 +1,7 @@
 // //global environment
 
+console.log('сука');
+
 // const secret = "007";
 
 // function x() {
@@ -68,12 +70,12 @@ const getNumber = multN(2);
 const fib = [1, 2, 3, 5, 8, 13];
 
 function loop() {
-  for (let i = 0; i < 5000000000; i++) {
-    // (function (k) {
-    //   setTimeout(function () {
-    //     console.log(k, fib[k]);
-    //   }, 1500);
-    // })(i);
+  for (let i = 0; i < 500000; i++) {
+    (function (k) {
+      setTimeout(() => {
+        console.log(k, fib[k]);
+      }, 0);
+    }(i));
   }
 }
 

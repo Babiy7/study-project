@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Positioning.scss';
@@ -7,7 +9,10 @@ const Positioning = ({
     name, top, left, right, bottom,
   },
 }) => (
-  <div className="positioning">
+  <div
+    className="positioning"
+    onClick={(e) => console.log('e:', e.target.tagName)}
+  >
     <div
       className={`positioning__tab positioning__tab_${name}`}
       style={{

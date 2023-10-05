@@ -31,7 +31,7 @@ function Form({ inputsData }) {
   }
 
   function buildInput(element) {
-    if (['text', 'email'].includes(element.type)) {
+    if (['text', 'email', 'file'].includes(element.type)) {
       return (
         <label htmlFor={element.id}>
           <input className="form__input" {...element} />
