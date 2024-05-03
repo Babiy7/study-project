@@ -6,6 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/index';
 import './JavaScript/patterns/CreationalDesign/Factory/index';
+import './JavaScript/patterns/CreationalDesign/Singleton/index';
 
 ReactDOM.render(
   <React.StrictMode>
