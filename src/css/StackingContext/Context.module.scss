@@ -1,0 +1,120 @@
+@import '../../styles/index.scss';
+
+.main {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #fae8f5;
+
+  .description {
+    position: absolute;
+    left: 120px;
+    top: 40%;
+    padding-right: 25px;
+
+    @include border(red, 1px, dashed);
+  }
+}
+
+.div1 {
+  position: relative;
+
+  z-index: 5;
+  opacity: 0.9;
+
+  @include box(#9bfa78, 98%);
+  @include border(red, 1px, dashed);
+
+  .textDiv1 {
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+}
+
+.div2 {
+  position: relative;
+  bottom: 0;
+
+  text-align: left;
+  z-index: 2;
+
+  @include box(#9bfa78, 98%);
+  @include border(red, 1px, dashed);
+
+  .textDiv2 {
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+}
+
+.div3 {
+  position: absolute;
+  top: 10px;
+  left: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  z-index: 3;
+
+  @include box(#f79edd, 70%, 800px);
+  @include border(red, 1px, dashed);
+
+  .textDiv3 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+  }
+}
+
+.div4 {
+  position: relative;
+
+  opacity: 0.9;
+  z-index: 6;
+
+  @include box(#faef78, 90%, 300px);
+  @include border(red, 1px, dashed);
+
+  .textDiv4 {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+  }
+}
+
+.div5 {
+  position: relative;
+
+  z-index: 1;
+
+  @include box(#faef78, 90%);
+  @include border(red, 1px, dashed);
+
+  .textDiv5 {
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+}
+
+.div6 {
+  position: absolute;
+  top: 200px;
+
+  z-index: 3;
+  
+  @include box(#b578fa, 70%, 500px);
+  @include border(red, 1px, dashed);
+
+  .textDiv6 {}
+}
