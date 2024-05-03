@@ -9,6 +9,7 @@ import './JavaScript/patterns/CreationalDesign/Factory/index';
 import './JavaScript/patterns/CreationalDesign/Singleton/index';
 import './JavaScript/patterns/CreationalDesign/Builder/index';
 import './JavaScript/patterns/StructuralDesign/Decorator/index';
+import './JavaScript/patterns/StructuralDesign/Façade/index';
 
 ReactDOM.render(
   <React.StrictMode>

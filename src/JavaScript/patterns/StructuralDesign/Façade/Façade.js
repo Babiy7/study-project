@@ -1,45 +1,18 @@
-const { Service, Product } = {
-  Service: 'Service',
-  Product: 'Product'
-};
+import { SERVICE, PRODUCT } from './enums';
+import { ProductComplaints } from './ProductComplaints';
+import { ServiceComplaints } from './ServiceComplaints';
 
-class Complaints {
-  constructor() {
-    this.complaints = [];
-  }
-
-  reply(complaint) {}
-
-  add(complaint) {
-    this.complaints.push(complaint);
-
-    return this.reply(complaint);
-  }
-}
-
-class ProductComplaints extends Complaints {
-  reply({ id, customer, details }) {
-    return `Product: ${id}: ${customer} (${details})`;
-  }
-}
-
-class ServiceComplaints extends Complaints {
-  reply({ id, customer, details }) {
-    return `Service: ${id}: ${customer} (${details})`;
-  }
-}
-
-class ComplaintRegistry {
+export class ComplaintRegistry {
   register(customer, type, details) {
     const id = Date.now();
     let complaint;
 
     switch (type) {
-      case Service: {
+      case SERVICE: {
         complaint = new ServiceComplaints();
         break;
       }
-      case Product: {
+      case PRODUCT: {
         complaint = new ProductComplaints();
         break;
       }
@@ -53,7 +26,3 @@ class ComplaintRegistry {
     return complaint.add({ id, customer, details });
   }
 }
-
-const registery = new ComplaintRegistry();
-
-console.log(registery.register('Oleh', Service, 'unvailable'));
