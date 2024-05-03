@@ -1,228 +1,225 @@
-@import './styles/helpers.scss';
+// @import './styles/helpers.scss';
 
 .App {
   height: 100vh;
-
-  display: flex;
-  justify-content: center;
 }
 
-.container {
-  width: 100px;
-  height: 100px;
+// .container {
+//   width: 100px;
+//   height: 100px;
 
-  position: relative;
+//   position: relative;
 
-  margin: auto;
-  border: red solid 1px;
+//   margin: auto;
+//   border: red solid 1px;
 
-  @include shadow(20px, 10px, 10px, 20px);
-  // background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%);
-}
+//   @include shadow(20px, 10px, 10px, 20px);
+//   // background: rgb(2,0,36);
+//   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 100%);
+// }
 
-// .item {
-//   width: 40px;
-//   height: 40px;
+// // .item {
+// //   width: 40px;
+// //   height: 40px;
 
+// //   position: absolute;
+
+// //   border-radius: 50%;
+// // }
+
+// .circle {
+//   width: 20px;
+//   height: 20px;
 //   position: absolute;
 
 //   border-radius: 50%;
 // }
 
-.circle {
-  width: 20px;
-  height: 20px;
-  position: absolute;
+// .red {
+//   top: 0;
+//   left: 0;
 
-  border-radius: 50%;
-}
+//   background-color: red;
 
-.red {
-  top: 0;
-  left: 0;
+//   animation: Red-circle infinite 2s ease;
+// }
 
-  background-color: red;
+// .green {
+//   top: 0;
+//   right: 0;
 
-  animation: Red-circle infinite 2s ease;
-}
+//   background-color: green;
 
-.green {
-  top: 0;
-  right: 0;
+//   animation: Green-circle infinite 2s ease;
+// }
 
-  background-color: green;
+// .blue {
+//   bottom: 0;
+//   left: 0;
 
-  animation: Green-circle infinite 2s ease;
-}
+//   background-color: blue;
 
-.blue {
-  bottom: 0;
-  left: 0;
+//   animation: Blue-circle infinite 2s ease;
+// }
 
-  background-color: blue;
+// .yellow {
+//   bottom: 0;
+//   right: 0;
 
-  animation: Blue-circle infinite 2s ease;
-}
+//   background-color: yellow;
 
-.yellow {
-  bottom: 0;
-  right: 0;
+//   animation: Yellow-circle infinite 2s ease;
+// }
 
-  background-color: yellow;
+// .App-logo {
+//   height: 40vmin;
+//   pointer-events: none;
+// }
 
-  animation: Yellow-circle infinite 2s ease;
-}
+// @keyframes Red-circle {
+//   0% {
+//     transform: translate(0, 0);
+//     opacity: 1;
+//   }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+//   25% {
+//     opacity: 0.5;
+//   }
 
-@keyframes Red-circle {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
+//   50% {
+//     transform: translate(60px, 60px);
+//     opacity: 1;
+//   }
 
-  25% {
-    opacity: 0.5;
-  }
-
-  50% {
-    transform: translate(60px, 60px);
-    opacity: 1;
-  }
-
-  75% {
-    opacity: 0.5;
-  }
+//   75% {
+//     opacity: 0.5;
+//   }
   
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
+//   100% {
+//     transform: translate(0, 0);
+//     opacity: 1;
+//   }
+// }
 
-@keyframes Green-circle {
-  0% {
-    transform: translate(0, 0);
-  }
+// @keyframes Green-circle {
+//   0% {
+//     transform: translate(0, 0);
+//   }
 
-  25% {
-    opacity: 0.5;
-  }
+//   25% {
+//     opacity: 0.5;
+//   }
 
-  50% {
-    transform: translate(-60px, 60px);
-  }
+//   50% {
+//     transform: translate(-60px, 60px);
+//   }
 
-  75% {
-    opacity: 0.5;
-  }
+//   75% {
+//     opacity: 0.5;
+//   }
 
-  100% {
-    transform: translate(0, 0);
-  }
-}
+//   100% {
+//     transform: translate(0, 0);
+//   }
+// }
 
-@keyframes Yellow-circle {
-  0% {
-    transform: translate(0, 0);
-  }
+// @keyframes Yellow-circle {
+//   0% {
+//     transform: translate(0, 0);
+//   }
 
-  25% {
-    opacity: 0.5;
-  }
+//   25% {
+//     opacity: 0.5;
+//   }
 
-  50% {
-    transform: translate(-60px, -60px);
-  }
+//   50% {
+//     transform: translate(-60px, -60px);
+//   }
 
-  75% {
-    opacity: 0.5;
-  }
+//   75% {
+//     opacity: 0.5;
+//   }
 
-  100% {
-    transform: translate(0, 0);
-  }
-}
+//   100% {
+//     transform: translate(0, 0);
+//   }
+// }
 
-@keyframes Blue-circle {
-  0% {
-    transform: translate(0, 0);
-  }
+// @keyframes Blue-circle {
+//   0% {
+//     transform: translate(0, 0);
+//   }
 
-  25% {
-    opacity: 0.5;
-  }
+//   25% {
+//     opacity: 0.5;
+//   }
 
-  50% {
-    transform: translate(60px, -60px);
-  }
+//   50% {
+//     transform: translate(60px, -60px);
+//   }
 
-  75% {
-    opacity: 0.5;
-  }
+//   75% {
+//     opacity: 0.5;
+//   }
 
-  100% {
-    transform: translate(0, 0);
-  }
-}
+//   100% {
+//     transform: translate(0, 0);
+//   }
+// }
 
-// flex
+// // flex
 
-.items {
-  position: relative;
-  height: 200px;
-  width: 90%;
-  top: 50%;
-  left: 50%;
-  margin-top: -100px;
-  margin-left: -45%;
-  border: red solid 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+// .items {
+//   position: relative;
+//   height: 200px;
+//   width: 90%;
+//   top: 50%;
+//   left: 50%;
+//   margin-top: -100px;
+//   margin-left: -45%;
+//   border: red solid 5px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
 
-  .item {
-    height: 100px;
-    border: green solid 1px;
-    flex-shrink: 3;
-    // flex-grow: 2;
-    flex-basis: 150px;
-    margin: 10px;
-  }
+//   .item {
+//     height: 100px;
+//     border: green solid 1px;
+//     flex-shrink: 3;
+//     // flex-grow: 2;
+//     flex-basis: 150px;
+//     margin: 10px;
+//   }
 
-  div {
-    border: 2px blue solid;
-  }
+//   div {
+//     border: 2px blue solid;
+//   }
 
-  // #item {
-  //   border: 2px black solid;
-  // }
+//   // #item {
+//   //   border: 2px black solid;
+//   // }
 
-  .item:first-child {
-    flex-shrink: 1;
-    border: 2px red solid;
-    // flex-grow: 1;
-  }
+//   .item:first-child {
+//     flex-shrink: 1;
+//     border: 2px red solid;
+//     // flex-grow: 1;
+//   }
 
-  .item::before {
-    position: absolute;
-    left: -30px;
-    content: '====';
-    color: red;
-  }
+//   .item::before {
+//     position: absolute;
+//     left: -30px;
+//     content: '====';
+//     color: red;
+//   }
 
-  .item::after {
-    position: absolute;
-    left: 163px;
-    content: '====';
-    color: green;
-  }
+//   .item::after {
+//     position: absolute;
+//     left: 163px;
+//     content: '====';
+//     color: green;
+//   }
 
-  .item:last-child {
-    border: black solid 2px;
-  }
-}
+//   .item:last-child {
+//     border: black solid 2px;
+//   }
+// }

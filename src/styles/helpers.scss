@@ -16,7 +16,7 @@
   box-shadow: $right $bottom $blur $spread $color;
 }
 
-@mixin box($width: 200px, $height: 200px, $backgroundColor: $pink) {
+@mixin box($backgroundColor: $pink, $width: 200px, $height: 200px) {
   width: $width;
   height: $height;
   background-color: $backgroundColor;

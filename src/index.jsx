@@ -8,7 +8,7 @@ import store from './redux/index';
 // import './JavaScript/patterns/CreationalDesign/Singleton/Singleton';
 // import './JavaScript/patterns/StructuralDesign/Façade/Façade';
 import './JavaScript/patterns/FunctionalDesign/memoization';
-import './JavaScript/main/15-XHR';
+// import './JavaScript/main/15-XHR';
 
 // import './JavaScript/main/6-closures';
 // import './JavaScript/ecmaScript6/2_arrow_functions';
