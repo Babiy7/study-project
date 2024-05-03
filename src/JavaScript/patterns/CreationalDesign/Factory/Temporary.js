@@ -1,5 +1,7 @@
 class Temporary {
-  constructor() {
+  constructor(person) {
+    this.name = person.name;
+    this.email = person.email;
     this.rate = '$10';
   }
 }

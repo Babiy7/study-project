@@ -1,7 +1,9 @@
-class Fulltime {
-  constructor() {
+class FullTime {
+  constructor(person) {
+    this.name = person.name;
+    this.email = person.email;
     this.rate = '$12';
   }
 }
 
-export default Fulltime;
+export default FullTime;

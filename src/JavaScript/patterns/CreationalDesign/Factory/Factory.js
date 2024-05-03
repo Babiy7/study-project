@@ -1,36 +1,39 @@
-import Fulltime from './FullTime';
+import FullTime from './FullTime';
 import PartTime from './PartTime';
 import Temporary from './Temporary';
+import { FULL_TIME, PART_TIME, TEMPORARY } from './enums';
 
 class Employee {
   constructor() {
     this.employee = null;
   }
 
-  create(type) {
+  create(type, person) {
     let { employee } = this;
 
     switch (type) {
-      case 'fulltime': {
-        employee = new Fulltime();
+      case FULL_TIME: {
+        employee = new FullTime(person);
         break;
       }
-      case 'parttime': {
-        employee = new PartTime();
+      case PART_TIME: {
+        employee = new PartTime(person);
         break;
       }
-      case 'temporary': {
-        employee = new Temporary();
+      case TEMPORARY: {
+        employee = new Temporary(person);
         break;
       }
       default: {
-        employee = new Fulltime();
+        employee = new FullTime(person);
       }
     }
 
     employee.type = type;
     employee.say = function () {
+      console.log(`${this.name}: ${this.email}`);
       console.log(`${this.type}: rate ${this.rate}/hour`);
+      console.log('====================================');
     };
 
     return employee;
