@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/index';
-import './JavaScript/patterns/CreationalDesign/Factory/index';
-import './JavaScript/patterns/CreationalDesign/Singleton/index';
-import './JavaScript/patterns/CreationalDesign/Builder/index';
-import './JavaScript/patterns/StructuralDesign/Decorator/index';
-import './JavaScript/patterns/StructuralDesign/Façade/index';
+import './final-exam/Factory/index';
+import './final-exam/Singleton/index';
+import './final-exam/Builder/index';
+import './final-exam/Decorator/index';
+import './final-exam/Façade/index';
 
 ReactDOM.render(
   <React.StrictMode>

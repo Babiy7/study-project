@@ -1,21 +1,22 @@
-function insertionSort(arr) {
-  const len = arr.length;
+function insertionSort(array) {
+  const { length } = array;
 
-  for (let i = 1; i < len; i++) {
-    const key = arr[i];
+  for (let i = 1; i < length; i++) {
+    const currentValue = array[i];
     let j = i - 1;
-    // Переміщуємо всі елементи більші за ключ вправо
-    while (j >= 0 && arr[j] > key) {
-      arr[j + 1] = arr[j];
+
+    while (j >= 0 && array[j] > currentValue) {
+      array[j + 1] = array[j];
       j -= 1;
     }
-    arr[j + 1] = key;
+
+    array[j + 1] = currentValue;
   }
-  return arr;
+
+  return array;
 }
 
-// Приклад використання
-const arr = [12, 11, 13, 5, 6];
-console.log('Масив до сортування:', arr);
-const sortedArr = insertionSort(arr);
-console.log('Масив після сортування:', sortedArr);
+const array = [12, 11, 13, 5, 6];
+const sortedArray = insertionSort(array);
+
+console.log('sorted array:', sortedArray);
