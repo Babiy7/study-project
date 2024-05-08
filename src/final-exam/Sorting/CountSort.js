@@ -1,26 +1,23 @@
-function countingSort(arr) {
-  const max = Math.max(...arr); // Знаходимо максимальне значення у масиві
-  const min = Math.min(...arr); // Знаходимо мінімальне значення у масиві
-  const count = new Array(max - min + 1).fill(0); // Створюємо масив для підрахунку входжень
+function countingSort(array) {
+  const max = Math.max(...array);
+  const min = Math.min(...array);
+  const countArray = new Array(max - min + 1).fill(0);
 
-  // Підраховуємо кількість входжень кожного елемента у масиві
-  for (let i = 0; i < arr.length; i++) {
-    count[arr[i] - min]++;
+  for (let i = 0; i < array.length; i++) {
+    countArray[array[i] - min]++;
   }
 
-  // Відновлюємо вихідний масив з відсортованих елементів
   let index = 0;
-  for (let i = 0; i < count.length; i++) {
-    while (count[i] > 0) {
-      arr[index++] = i + min;
-      count[i]--;
+
+  for (let i = 0; i < countArray.length; i++) {
+    while (countArray[i] > 0) {
+      array[index++] = i + min;
+      countArray[i]--;
     }
   }
 
-  return arr;
+  return array;
 }
 
-// Приклад використання:
-const arr = [4, 2, 2, 8, 3, 3, 1];
-console.log('Не відсортований масив:', arr);
-console.log('Відсортований масив:', countingSort(arr));
+const array = [4, 2, 2, 8, 25, 3, 3, 1];
+console.log('sorted array:', countingSort(array));
