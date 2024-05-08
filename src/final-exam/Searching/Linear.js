@@ -5,7 +5,7 @@ function linearSearch(arr, target) {
     }
   }
 
-  return 'Немає цільового елементу';
+  return 'Немає цільового елемента';
 }
 
 const array = [5, 3, 9, 7, 2, 8];
