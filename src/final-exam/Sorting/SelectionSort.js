@@ -1,4 +1,4 @@
-function selectionSort(array) {
+const selectionSort = (array) => {
   const { length } = array;
 
   for (let i = 0; i < length - 1; i++) {
@@ -19,7 +19,7 @@ function selectionSort(array) {
   }
 
   return array;
-}
+};
 
 const array = [64, 25, 12, 22, 11];
 const sortedArray = selectionSort(array);

@@ -1,6 +1,6 @@
 const { insertionSort } = require('./InsertionSort');
 
-function bucketSort(arr, bucketSize) {
+const bucketSort = (arr, bucketSize) => {
   if (arr.length === 0) {
     return arr;
   }
@@ -27,7 +27,7 @@ function bucketSort(arr, bucketSize) {
   }
 
   return sortedArray;
-}
+};
 
 const array = [29, 17, 38, 4, 25, 11, 32];
 const sortedArray = bucketSort(array, 5);

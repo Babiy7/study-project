@@ -1,4 +1,4 @@
-function countingSort(array) {
+const countingSort = (array) => {
   const max = Math.max(...array);
   const min = Math.min(...array);
   const countArray = new Array(max - min + 1).fill(0);
@@ -17,7 +17,7 @@ function countingSort(array) {
   }
 
   return array;
-}
+};
 
 const array = [4, 2, 2, 8, 25, 3, 3, 1];
 console.log('sorted array:', countingSort(array));

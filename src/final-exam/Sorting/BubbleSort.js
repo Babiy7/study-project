@@ -1,4 +1,4 @@
-function bubbleSort(array) {
+const bubbleSort = (array) => {
   const { length } = array;
 
   for (let i = 0; i < length; i++) {
@@ -14,7 +14,7 @@ function bubbleSort(array) {
   }
 
   return array;
-}
+};
 
 const array = [64, 34, 25, 12, 22, 11, 90];
 const sortedArray = bubbleSort(array);
