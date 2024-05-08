@@ -20,3 +20,5 @@ const array = [12, 11, 13, 5, 6];
 const sortedArray = insertionSort(array);
 
 console.log('sorted array:', sortedArray);
+
+module.exports = { insertionSort };
