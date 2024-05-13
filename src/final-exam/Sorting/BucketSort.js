@@ -1,4 +1,5 @@
 const { insertionSort } = require('./InsertionSort');
+const { print } = require('./print');
 
 const bucketSort = (arr, bucketSize) => {
   if (arr.length === 0) {
@@ -30,6 +31,4 @@ const bucketSort = (arr, bucketSize) => {
 };
 
 const array = [29, 17, 38, 4, 25, 11, 32];
-const sortedArray = bucketSort(array, 5);
-
-console.log('sorted array:', sortedArray);
+print(bucketSort(array, 5), array);

@@ -1,3 +1,5 @@
+const { print } = require('./print');
+
 const radixSort = (array) => {
   const max = Math.max(...array);
   const maxDigitCount = String(max).length;
@@ -18,4 +20,4 @@ const radixSort = (array) => {
 };
 
 const array = [170, 45, 75, 90, 802, 24, 2, 66];
-console.log('sorted array:', radixSort(array));
+print(radixSort(array), array);

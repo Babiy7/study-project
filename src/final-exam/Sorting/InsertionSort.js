@@ -1,3 +1,5 @@
+const { print } = require('./print');
+
 const insertionSort = (array) => {
   const { length } = array;
 
@@ -17,8 +19,6 @@ const insertionSort = (array) => {
 };
 
 const array = [12, 11, 13, 5, 6];
-const sortedArray = insertionSort(array);
-
-console.log('sorted array:', sortedArray);
+print(insertionSort(array), array);
 
 module.exports = { insertionSort };

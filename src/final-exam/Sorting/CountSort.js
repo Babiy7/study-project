@@ -1,3 +1,5 @@
+const { print } = require('./print');
+
 const countingSort = (array) => {
   const max = Math.max(...array);
   const min = Math.min(...array);
@@ -20,4 +22,4 @@ const countingSort = (array) => {
 };
 
 const array = [4, 2, 2, 8, 25, 3, 3, 1];
-console.log('sorted array:', countingSort(array));
+print(countingSort(array), array);

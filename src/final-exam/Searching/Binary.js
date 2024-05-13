@@ -1,6 +1,6 @@
 const { print } = require('./print');
 
-const binarySearch = (array, target) => {
+const binarySearch = (array, searchedValue) => {
   let left = 0;
   let right = array.length - 1;
 
@@ -8,11 +8,11 @@ const binarySearch = (array, target) => {
     const middle = Math.floor((left + right) / 2);
     const middleValue = array[middle];
 
-    if (middleValue === target) {
+    if (middleValue === searchedValue) {
       return middle;
     }
 
-    if (middleValue < target) {
+    if (middleValue < searchedValue) {
       left = middle + 1;
     } else {
       right = middle - 1;
@@ -23,6 +23,6 @@ const binarySearch = (array, target) => {
 };
 
 const array = [2, 4, 7, 10, 15, 20, 23];
-const target = 15;
+const searchedValue = 15;
 
-print(binarySearch(array, target), target);
+print(binarySearch(array, searchedValue), searchedValue);

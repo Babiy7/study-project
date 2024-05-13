@@ -1,3 +1,5 @@
+const { print } = require('./print');
+
 const bubbleSort = (array) => {
   const { length } = array;
 
@@ -17,5 +19,4 @@ const bubbleSort = (array) => {
 };
 
 const array = [64, 34, 25, 12, 22, 11, 90];
-const sortedArray = bubbleSort(array);
-console.log('sorted array:', sortedArray);
+print(bubbleSort(array), array);
